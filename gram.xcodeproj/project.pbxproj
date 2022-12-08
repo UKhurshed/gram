@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48D6C441637132D93F60B418 /* Pods_gram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87C65F3DDF407CCE8E9B089A /* Pods_gram.framework */; };
 		D3C2F5412941C4F7003AC29D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C2F5402941C4F7003AC29D /* AppDelegate.swift */; };
 		D3C2F5432941C4F7003AC29D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C2F5422941C4F7003AC29D /* SceneDelegate.swift */; };
 		D3C2F5452941C4F7003AC29D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C2F5442941C4F7003AC29D /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		16A8A005BA5D1103306CB449 /* Pods-gram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gram.release.xcconfig"; path = "Target Support Files/Pods-gram/Pods-gram.release.xcconfig"; sourceTree = "<group>"; };
+		87C65F3DDF407CCE8E9B089A /* Pods_gram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA0F28D35F87FF7E0E4FC165 /* Pods-gram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gram.debug.xcconfig"; path = "Target Support Files/Pods-gram/Pods-gram.debug.xcconfig"; sourceTree = "<group>"; };
 		D3C2F53D2941C4F7003AC29D /* gram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3C2F5402941C4F7003AC29D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3C2F5422941C4F7003AC29D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48D6C441637132D93F60B418 /* Pods_gram.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		76B7E07E188DD2FEF94A054B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				87C65F3DDF407CCE8E9B089A /* Pods_gram.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9A44BEC168C6A30E7CB6DD5F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CA0F28D35F87FF7E0E4FC165 /* Pods-gram.debug.xcconfig */,
+				16A8A005BA5D1103306CB449 /* Pods-gram.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		D3C2F5342941C4F7003AC29D = {
 			isa = PBXGroup;
 			children = (
 				D3C2F53F2941C4F7003AC29D /* gram */,
 				D3C2F53E2941C4F7003AC29D /* Products */,
+				9A44BEC168C6A30E7CB6DD5F /* Pods */,
+				76B7E07E188DD2FEF94A054B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3C2F5512941C4F8003AC29D /* Build configuration list for PBXNativeTarget "gram" */;
 			buildPhases = (
+				082CB3B1A66DD0D8504ECF41 /* [CP] Check Pods Manifest.lock */,
 				D3C2F5392941C4F7003AC29D /* Sources */,
 				D3C2F53A2941C4F7003AC29D /* Frameworks */,
 				D3C2F53B2941C4F7003AC29D /* Resources */,
+				032D690FA3F4391622D615D3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		032D690FA3F4391622D615D3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-gram/Pods-gram-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-gram/Pods-gram-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-gram/Pods-gram-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		082CB3B1A66DD0D8504ECF41 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-gram-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D3C2F5392941C4F7003AC29D /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		D3C2F5522941C4F8003AC29D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA0F28D35F87FF7E0E4FC165 /* Pods-gram.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +380,7 @@
 		};
 		D3C2F5532941C4F8003AC29D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16A8A005BA5D1103306CB449 /* Pods-gram.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
