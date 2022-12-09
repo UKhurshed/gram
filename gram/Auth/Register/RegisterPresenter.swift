@@ -31,7 +31,6 @@ class RegisterPresenter: RegisterViewInput {
                 viewController?.finishLoading()
                 let viewModel = RegisterViewModel(smsCode: interactorResult.result.smsCode, clientRegisterID: interactorResult.result.clientRegisterID)
                 viewController?.presentingRegister(viewModel: viewModel)
-                
             } catch {
                 viewController?.showError(errorDescription: error.localizedDescription)
             }

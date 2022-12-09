@@ -13,7 +13,6 @@ class RegisterViewController: UIViewController {
         self.view as! RegisterUIView
     }
     
-    
     var presenterInput: RegisterViewInput!
     
     override func loadView() {
@@ -71,7 +70,6 @@ extension RegisterViewController: DisplayLogic {
 
 extension RegisterViewController: NextBtnPressedDelegate {
     func nextBtnAction(phoneNumber: String) {
-        print("Phone: \(phoneNumber)")
         presenterInput.registerByPhoneNumber(request: RegisterRequest(phoneNumber: phoneNumber))
     }
 }

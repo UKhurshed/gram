@@ -108,13 +108,13 @@
 		D3C2F53F2941C4F7003AC29D /* gram */ = {
 			isa = PBXGroup;
 			children = (
-				D3CB56FB2941CB4B004B259D /* Core */,
+				D3CB56FB2941CB4B004B259D /* Common */,
 				D3CB57012941EC15004B259D /* Auth */,
 			);
 			path = gram;
 			sourceTree = "<group>";
 		};
-		D3CB56FB2941CB4B004B259D /* Core */ = {
+		D3CB56FB2941CB4B004B259D /* Common */ = {
 			isa = PBXGroup;
 			children = (
 				D340009029433349006AC599 /* URLSessionFacade */,
@@ -124,7 +124,7 @@
 				D3C2F54B2941C4F8003AC29D /* LaunchScreen.storyboard */,
 				D3C2F54E2941C4F8003AC29D /* Info.plist */,
 			);
-			path = Core;
+			path = Common;
 			sourceTree = "<group>";
 		};
 		D3CB56FC2941CB91004B259D /* Resources */ = {
