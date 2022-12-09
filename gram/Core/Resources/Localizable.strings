@@ -7,3 +7,9 @@
 */
 
 "appName" = "Gram";
+//Register Screen
+"enterPhoneNumber" = "Enter phone number";
+"nextBtn" = "Next";
+"tjCode" = "+992";
+"errorLabel" = "Error";
+"alertDismiss" = "Dismiss";
