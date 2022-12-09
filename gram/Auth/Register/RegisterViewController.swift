@@ -7,20 +7,14 @@
 
 import UIKit
 
-protocol RegisterDisplayLogic: AnyObject {
-    func presentingRegister(viewModel: RegisterViewModel)
-    func startLoading()
-    func finishLoading()
-    func showError(errorDescription: String)
-}
-
 class RegisterViewController: UIViewController {
     
     private var registerView: RegisterUIView {
         self.view as! RegisterUIView
     }
     
-    var interactor: RegisterBusinessLogic?
+    
+    var presenterInput: RegisterViewInput!
     
     override func loadView() {
         view = RegisterUIView()
@@ -34,15 +28,17 @@ class RegisterViewController: UIViewController {
     
     private func setup() {
         let viewController = self
-        let interactor = RegisterInteractor()
+        let facade = URLSessionFacade()
+        let service = RegisterServiceImpl(urlSession: facade)
+        let interactor = RegisterInteractor(service: service)
         let presenter = RegisterPresenter()
-        viewController.interactor = interactor
-        interactor.presenter = presenter
+        viewController.presenterInput = presenter
+        presenter.interactor = interactor
         presenter.viewController = viewController
     }
 }
 
-extension RegisterViewController: RegisterDisplayLogic {
+extension RegisterViewController: DisplayLogic {
     
     func presentingRegister(viewModel: RegisterViewModel) {
         print("load presents from interactor: \(viewModel)")
@@ -76,6 +72,6 @@ extension RegisterViewController: RegisterDisplayLogic {
 extension RegisterViewController: NextBtnPressedDelegate {
     func nextBtnAction(phoneNumber: String) {
         print("Phone: \(phoneNumber)")
-        interactor?.sendPhoneNumber(reguest: RegisterRequest(phoneNumber: phoneNumber))
+        presenterInput.registerByPhoneNumber(request: RegisterRequest(phoneNumber: phoneNumber))
     }
 }

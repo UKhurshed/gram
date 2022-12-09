@@ -7,19 +7,35 @@
 
 import Foundation
 
-protocol RegisterPresentationLogic: AnyObject {
-    func presentingRegister(response: RegisterResponse)
+protocol RegisterViewInput: AnyObject {
+    func registerByPhoneNumber(request: RegisterRequest)
 }
 
+protocol DisplayLogic: AnyObject {
+    func presentingRegister(viewModel: RegisterViewModel)
+    func startLoading()
+    func finishLoading()
+    func showError(errorDescription: String)
+}
 
-class RegisterPresenter: RegisterPresentationLogic {
+class RegisterPresenter: RegisterViewInput {
     
-    weak var viewController: RegisterDisplayLogic?
+    weak var viewController: DisplayLogic?
+    var interactor: RegisterBusinessLogic!
     
-    func presentingRegister(response: RegisterResponse) {
-        print("response: \(response)")
-        let viewModel = RegisterViewModel(smsCode: response.result.smsCode, clientRegisterID: response.result.clientRegisterID)
-        viewController?.presentingRegister(viewModel: viewModel)
+    func registerByPhoneNumber(request: RegisterRequest) {
+        Task {
+            do {
+                viewController?.startLoading()
+                let interactorResult = try await interactor.sendPhoneNumber(reguest: request)
+                viewController?.finishLoading()
+                let viewModel = RegisterViewModel(smsCode: interactorResult.result.smsCode, clientRegisterID: interactorResult.result.clientRegisterID)
+                viewController?.presentingRegister(viewModel: viewModel)
+                
+            } catch {
+                viewController?.showError(errorDescription: error.localizedDescription)
+            }
+        }
     }
     
 }

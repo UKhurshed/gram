@@ -10,6 +10,7 @@
 		48D6C441637132D93F60B418 /* Pods_gram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87C65F3DDF407CCE8E9B089A /* Pods_gram.framework */; };
 		D34000922943336A006AC599 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34000912943336A006AC599 /* CustomError.swift */; };
 		D34000942943337A006AC599 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34000932943337A006AC599 /* APIRequest.swift */; };
+		D3400096294335F4006AC599 /* URLSessionFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3400095294335F4006AC599 /* URLSessionFacade.swift */; };
 		D3C2F5412941C4F7003AC29D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C2F5402941C4F7003AC29D /* AppDelegate.swift */; };
 		D3C2F5432941C4F7003AC29D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C2F5422941C4F7003AC29D /* SceneDelegate.swift */; };
 		D3C2F54A2941C4F8003AC29D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3C2F5492941C4F8003AC29D /* Assets.xcassets */; };
@@ -30,6 +31,7 @@
 		CA0F28D35F87FF7E0E4FC165 /* Pods-gram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gram.debug.xcconfig"; path = "Target Support Files/Pods-gram/Pods-gram.debug.xcconfig"; sourceTree = "<group>"; };
 		D34000912943336A006AC599 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 		D34000932943337A006AC599 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
+		D3400095294335F4006AC599 /* URLSessionFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionFacade.swift; sourceTree = "<group>"; };
 		D3C2F53D2941C4F7003AC29D /* gram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3C2F5402941C4F7003AC29D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3C2F5422941C4F7003AC29D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +82,7 @@
 			children = (
 				D34000912943336A006AC599 /* CustomError.swift */,
 				D34000932943337A006AC599 /* APIRequest.swift */,
+				D3400095294335F4006AC599 /* URLSessionFacade.swift */,
 			);
 			path = URLSessionFacade;
 			sourceTree = "<group>";
@@ -105,8 +108,8 @@
 		D3C2F53F2941C4F7003AC29D /* gram */ = {
 			isa = PBXGroup;
 			children = (
-				D3CB57012941EC15004B259D /* Auth */,
 				D3CB56FB2941CB4B004B259D /* Core */,
+				D3CB57012941EC15004B259D /* Auth */,
 			);
 			path = gram;
 			sourceTree = "<group>";
@@ -299,6 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3400096294335F4006AC599 /* URLSessionFacade.swift in Sources */,
 				D3CB57032941ED36004B259D /* RegisterViewController.swift in Sources */,
 				D3CB570B294249C8004B259D /* RegisterModel.swift in Sources */,
 				D3C2F5412941C4F7003AC29D /* AppDelegate.swift in Sources */,
