@@ -11,6 +11,12 @@
 		D34000922943336A006AC599 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34000912943336A006AC599 /* CustomError.swift */; };
 		D34000942943337A006AC599 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34000932943337A006AC599 /* APIRequest.swift */; };
 		D3400096294335F4006AC599 /* URLSessionFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3400095294335F4006AC599 /* URLSessionFacade.swift */; };
+		D34000982943632A006AC599 /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34000972943632A006AC599 /* VerificationViewController.swift */; };
+		D340009A29436349006AC599 /* VerificationUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D340009929436349006AC599 /* VerificationUIView.swift */; };
+		D340009C29437524006AC599 /* VerificationModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D340009B29437524006AC599 /* VerificationModel.swift */; };
+		D340009E2943793B006AC599 /* VerificationInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D340009D2943793B006AC599 /* VerificationInteractor.swift */; };
+		D34000A029437951006AC599 /* VerificationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D340009F29437951006AC599 /* VerificationPresenter.swift */; };
+		D34000A229437970006AC599 /* VerificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34000A129437970006AC599 /* VerificationService.swift */; };
 		D3C2F5412941C4F7003AC29D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C2F5402941C4F7003AC29D /* AppDelegate.swift */; };
 		D3C2F5432941C4F7003AC29D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C2F5422941C4F7003AC29D /* SceneDelegate.swift */; };
 		D3C2F54A2941C4F8003AC29D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3C2F5492941C4F8003AC29D /* Assets.xcassets */; };
@@ -32,6 +38,12 @@
 		D34000912943336A006AC599 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 		D34000932943337A006AC599 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		D3400095294335F4006AC599 /* URLSessionFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionFacade.swift; sourceTree = "<group>"; };
+		D34000972943632A006AC599 /* VerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
+		D340009929436349006AC599 /* VerificationUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationUIView.swift; sourceTree = "<group>"; };
+		D340009B29437524006AC599 /* VerificationModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationModel.swift; sourceTree = "<group>"; };
+		D340009D2943793B006AC599 /* VerificationInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationInteractor.swift; sourceTree = "<group>"; };
+		D340009F29437951006AC599 /* VerificationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationPresenter.swift; sourceTree = "<group>"; };
+		D34000A129437970006AC599 /* VerificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationService.swift; sourceTree = "<group>"; };
 		D3C2F53D2941C4F7003AC29D /* gram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3C2F5402941C4F7003AC29D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3C2F5422941C4F7003AC29D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -162,6 +174,12 @@
 		D3CB57052941ED43004B259D /* Verification */ = {
 			isa = PBXGroup;
 			children = (
+				D34000972943632A006AC599 /* VerificationViewController.swift */,
+				D340009929436349006AC599 /* VerificationUIView.swift */,
+				D340009B29437524006AC599 /* VerificationModel.swift */,
+				D340009D2943793B006AC599 /* VerificationInteractor.swift */,
+				D340009F29437951006AC599 /* VerificationPresenter.swift */,
+				D34000A129437970006AC599 /* VerificationService.swift */,
 			);
 			path = Verification;
 			sourceTree = "<group>";
@@ -289,11 +307,11 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				$SRCROOT/gram/Core/Resources/R.generated.swift,
+				$SRCROOT/gram/Common/Resources/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/gram/Core/Resources/R.generated.swift\"\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"$PODS_ROOT/R.swift/rswift\" generate \"$SRCROOT/gram/Common/Resources/R.generated.swift\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -302,15 +320,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D34000982943632A006AC599 /* VerificationViewController.swift in Sources */,
 				D3400096294335F4006AC599 /* URLSessionFacade.swift in Sources */,
+				D34000A229437970006AC599 /* VerificationService.swift in Sources */,
 				D3CB57032941ED36004B259D /* RegisterViewController.swift in Sources */,
+				D340009E2943793B006AC599 /* VerificationInteractor.swift in Sources */,
+				D340009A29436349006AC599 /* VerificationUIView.swift in Sources */,
 				D3CB570B294249C8004B259D /* RegisterModel.swift in Sources */,
 				D3C2F5412941C4F7003AC29D /* AppDelegate.swift in Sources */,
 				D3CB57072941ED66004B259D /* RegisterUIView.swift in Sources */,
 				D3CB57092942497A004B259D /* RegisterInteractor.swift in Sources */,
 				D34000922943336A006AC599 /* CustomError.swift in Sources */,
 				D3C2F5432941C4F7003AC29D /* SceneDelegate.swift in Sources */,
+				D340009C29437524006AC599 /* VerificationModel.swift in Sources */,
 				D34000942943337A006AC599 /* APIRequest.swift in Sources */,
+				D34000A029437951006AC599 /* VerificationPresenter.swift in Sources */,
 				D3CB570F2942581A004B259D /* RegisterService.swift in Sources */,
 				D3CB57002941CFA8004B259D /* R.generated.swift in Sources */,
 				D3CB570D294256BA004B259D /* RegisterPresenter.swift in Sources */,
@@ -455,7 +479,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 95X368593A;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = gram/Core/Info.plist;
+				INFOPLIST_FILE = gram/Common/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -484,7 +508,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 95X368593A;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = gram/Core/Info.plist;
+				INFOPLIST_FILE = gram/Common/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
