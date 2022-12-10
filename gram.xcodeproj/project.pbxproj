@@ -18,6 +18,8 @@
 		D34000A029437951006AC599 /* VerificationPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D340009F29437951006AC599 /* VerificationPresenter.swift */; };
 		D34000A229437970006AC599 /* VerificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34000A129437970006AC599 /* VerificationService.swift */; };
 		D35BBB35294483160043B033 /* UserDefaultsKeyConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35BBB34294483160043B033 /* UserDefaultsKeyConstants.swift */; };
+		D35BBB372944868D0043B033 /* MainUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35BBB362944868D0043B033 /* MainUIView.swift */; };
+		D35BBB392944869D0043B033 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35BBB382944869D0043B033 /* MainViewController.swift */; };
 		D3C2F5412941C4F7003AC29D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C2F5402941C4F7003AC29D /* AppDelegate.swift */; };
 		D3C2F5432941C4F7003AC29D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3C2F5422941C4F7003AC29D /* SceneDelegate.swift */; };
 		D3C2F54A2941C4F8003AC29D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3C2F5492941C4F8003AC29D /* Assets.xcassets */; };
@@ -46,6 +48,8 @@
 		D340009F29437951006AC599 /* VerificationPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationPresenter.swift; sourceTree = "<group>"; };
 		D34000A129437970006AC599 /* VerificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationService.swift; sourceTree = "<group>"; };
 		D35BBB34294483160043B033 /* UserDefaultsKeyConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeyConstants.swift; sourceTree = "<group>"; };
+		D35BBB362944868D0043B033 /* MainUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainUIView.swift; sourceTree = "<group>"; };
+		D35BBB382944869D0043B033 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D3C2F53D2941C4F7003AC29D /* gram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3C2F5402941C4F7003AC29D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3C2F5422941C4F7003AC29D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -104,6 +108,8 @@
 		D35BBB33294482600043B033 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				D35BBB382944869D0043B033 /* MainViewController.swift */,
+				D35BBB362944868D0043B033 /* MainUIView.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -129,9 +135,9 @@
 		D3C2F53F2941C4F7003AC29D /* gram */ = {
 			isa = PBXGroup;
 			children = (
-				D35BBB33294482600043B033 /* Main */,
 				D3CB56FB2941CB4B004B259D /* Common */,
 				D3CB57012941EC15004B259D /* Auth */,
+				D35BBB33294482600043B033 /* Main */,
 			);
 			path = gram;
 			sourceTree = "<group>";
@@ -331,6 +337,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D35BBB392944869D0043B033 /* MainViewController.swift in Sources */,
 				D34000982943632A006AC599 /* VerificationViewController.swift in Sources */,
 				D3400096294335F4006AC599 /* URLSessionFacade.swift in Sources */,
 				D34000A229437970006AC599 /* VerificationService.swift in Sources */,
@@ -348,6 +355,7 @@
 				D34000A029437951006AC599 /* VerificationPresenter.swift in Sources */,
 				D3CB570F2942581A004B259D /* RegisterService.swift in Sources */,
 				D3CB57002941CFA8004B259D /* R.generated.swift in Sources */,
+				D35BBB372944868D0043B033 /* MainUIView.swift in Sources */,
 				D35BBB35294483160043B033 /* UserDefaultsKeyConstants.swift in Sources */,
 				D3CB570D294256BA004B259D /* RegisterPresenter.swift in Sources */,
 			);
