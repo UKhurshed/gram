@@ -22,7 +22,7 @@ class VerificationServiceImpl: VerificationService {
         ]
         
         let verifyResponse: VerifyResponse = try await urlSession.verifyBySmsCode(with: APIRequest(path: APIConstants.verifyPathURL, params: params, host: APIConstants.hostURL, httpMethod: .post))
-
+        UserDefaults.standard.set(verifyResponse.result.accessToken, forKey: UserDefaultsKeyContants.accessToken)
         return verifyResponse
     }
 }

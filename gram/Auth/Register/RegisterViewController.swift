@@ -43,7 +43,6 @@ extension RegisterViewController: RegisterDisplayLogic {
         print("load presents from interactor: \(viewModel)")
         DispatchQueue.main.async {
             let vc = VerificationViewController()
-            vc.clienrID = viewModel.clientRegisterID
             self.navigationController?.pushViewController(vc, animated: true)
         }
         

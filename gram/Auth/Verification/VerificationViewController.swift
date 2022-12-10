@@ -15,8 +15,6 @@ class VerificationViewController: UIViewController {
     
     var presenter: VerifyViewInput!
     
-    var clienrID: String = ""
-    
     override func loadView() {
         view = VerificationUIView()
     }
@@ -71,6 +69,6 @@ extension VerificationViewController: VerifyDisplayLogic {
 extension VerificationViewController: VerifyUIViewDelegate {
     func sentCode(code: String) {
         let clientRegisterID = UserDefaults.standard.string(forKey: "clientRegisterID") ?? ""
-        presenter.verifyByCode(request: VerifyRequest(clientRegisterID: clienrID, smsCode: code))
+        presenter.verifyByCode(request: VerifyRequest(clientRegisterID: clientRegisterID, smsCode: code))
     }
 }

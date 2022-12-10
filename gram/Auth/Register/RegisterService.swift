@@ -23,7 +23,7 @@ class RegisterServiceImpl: RegisterService {
         let apiRequest = APIRequest(path: APIConstants.registerPathURL, params: params, host: APIConstants.hostURL, httpMethod: .post)
         let response: RegisterResponse = try await urlSession.registerUserByPhoneNumber(with: apiRequest)
         print("RegisterServiceImpl registerUserByPhoneNumber: \(response)")
-        UserDefaults.standard.set(response.result.clientRegisterID, forKey: "clientRegisterID")
+        UserDefaults.standard.set(response.result.clientRegisterID, forKey: UserDefaultsKeyContants.clientRegisterID)
         return response
     }
     
