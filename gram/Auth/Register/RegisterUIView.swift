@@ -126,6 +126,10 @@ class RegisterUIView: UIView {
         return "+" + number
     }
     
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     public func startAnimatingIndicator() {
         indicator.startAnimating()
     }
@@ -136,10 +140,6 @@ class RegisterUIView: UIView {
     
     public func showError() {
         indicator.stopAnimating()
-    }
-
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }
 

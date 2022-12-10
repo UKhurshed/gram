@@ -37,10 +37,16 @@ class RegisterViewController: UIViewController {
     }
 }
 
-extension RegisterViewController: DisplayLogic {
+extension RegisterViewController: RegisterDisplayLogic {
     
-    func presentingRegister(viewModel: RegisterViewModel) {
+    func success(viewModel: RegisterViewModel) {
         print("load presents from interactor: \(viewModel)")
+        DispatchQueue.main.async {
+            let vc = VerificationViewController()
+            vc.clienrID = viewModel.clientRegisterID
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+        
     }
     
     func startLoading() {
