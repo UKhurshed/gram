@@ -13,3 +13,14 @@
 "tjCode" = "+992";
 "errorLabel" = "Error";
 "alertDismiss" = "Dismiss";
+
+//Verification Screen
+"enterCodeLabel" = "Please enter the code from the text message we sent to";
+
+"jsonParseError" = "Json parse error";
+"urlConvertIsNull" = "Url convert is null";
+"dataFromDataTaskIsNull" = "Data from dataTask is null";
+"thereIsNoInternetConnection" = "There is no internet connection";
+"networkSessionError" = "Network session error was occurred";
+"freedReference" = "The arc reference was nil";
+"serviceWasNil" = "Service instance was nil";

@@ -7,6 +7,13 @@
 
 import Foundation
 
+struct APIConstants {
+    static let scheme: String = "http"
+    static let hostURL: String = "testapi.client.gram.tj"
+    static let registerPathURL: String = "/api/auth/client-registers"
+    static let verifyPathURL: String = "/api/auth/client-registers/2"
+}
+
 struct APIRequest {
     let path: String
     let params: [String: String]
