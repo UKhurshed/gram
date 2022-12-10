@@ -11,8 +11,8 @@ protocol RegisterViewInput: AnyObject {
     func registerByPhoneNumber(request: RegisterRequest)
 }
 
-protocol DisplayLogic: AnyObject {
-    func presentingRegister(viewModel: RegisterViewModel)
+protocol RegisterDisplayLogic: AnyObject {
+    func success(viewModel: RegisterViewModel)
     func startLoading()
     func finishLoading()
     func showError(errorDescription: String)
@@ -20,7 +20,7 @@ protocol DisplayLogic: AnyObject {
 
 class RegisterPresenter: RegisterViewInput {
     
-    weak var viewController: DisplayLogic?
+    weak var viewController: RegisterDisplayLogic?
     var interactor: RegisterBusinessLogic!
     
     func registerByPhoneNumber(request: RegisterRequest) {
@@ -30,7 +30,7 @@ class RegisterPresenter: RegisterViewInput {
                 let interactorResult = try await interactor.sendPhoneNumber(reguest: request)
                 viewController?.finishLoading()
                 let viewModel = RegisterViewModel(smsCode: interactorResult.result.smsCode, clientRegisterID: interactorResult.result.clientRegisterID)
-                viewController?.presentingRegister(viewModel: viewModel)
+                viewController?.success(viewModel: viewModel)
             } catch {
                 viewController?.showError(errorDescription: error.localizedDescription)
             }
