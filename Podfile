@@ -6,6 +6,7 @@ target 'gram' do
   use_frameworks!
   pod 'SnapKit', '~> 5.6.0'
   pod 'R.swift'
+  pod 'YandexMapsMobile', '4.2.2-full'
 
   # Pods for gram
 
