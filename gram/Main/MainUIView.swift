@@ -13,7 +13,7 @@ class MainUIView: UIView {
     private var mapView = YMKMapView()
     private let locationView = UIView()
     private let moreBackground = UIImageView()
-    private let moreIcon = UIImageView()
+    private let locationBackground = UIImageView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -25,6 +25,7 @@ class MainUIView: UIView {
                     YMKCameraPosition(target: YMKPoint(latitude: 40.272309, longitude: 69.623485), zoom: 14, azimuth: 0, tilt: 0))
         initLocationView()
         initMoreBackground()
+        initLocationBackground()
     }
     
     private func initMapView() {
@@ -55,11 +56,9 @@ class MainUIView: UIView {
     
     private func initMoreBackground() {
         moreBackground.translatesAutoresizingMaskIntoConstraints = false
-        moreBackground.image = UIImage(named: "moreBackground")
-        
-       
+        moreBackground.image = R.image.moreBackground()
+    
         addSubview(moreBackground)
-        
         moreBackground.snp.makeConstraints { makeMoreBack in
             makeMoreBack.top.equalToSuperview().offset(62)
             makeMoreBack.right.equalToSuperview().offset(-20)
@@ -69,7 +68,7 @@ class MainUIView: UIView {
         
         
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "more")
+        imageView.image = R.image.more()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         moreBackground.addSubview(imageView)
         imageView.snp.makeConstraints { make in
@@ -78,7 +77,30 @@ class MainUIView: UIView {
             make.centerX.equalToSuperview()
             make.centerY.equalToSuperview()
         }
+    }
+    
+    private func initLocationBackground() {
+        locationBackground.translatesAutoresizingMaskIntoConstraints = false
+        locationBackground.image = R.image.moreBackground()
+    
+        addSubview(locationBackground)
+        locationBackground.snp.makeConstraints { makeLocationBack in
+            makeLocationBack.top.equalToSuperview().offset(62)
+            makeLocationBack.left.equalToSuperview().offset(20)
+            makeLocationBack.height.equalTo(50)
+            makeLocationBack.width.equalTo(50)
+        }
         
+        let imageView = UIImageView()
+        imageView.image = R.image.location()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        locationBackground.addSubview(imageView)
+        imageView.snp.makeConstraints { make in
+            make.height.equalTo(15)
+            make.width.equalTo(15)
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview()
+        }
     }
     
     required init?(coder: NSCoder) {

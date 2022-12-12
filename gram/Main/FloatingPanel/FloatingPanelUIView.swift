@@ -56,7 +56,7 @@ class FloatingPanelUIView: UIView {
     private func initCarIcon() {
         carIcon.translatesAutoresizingMaskIntoConstraints = false
         carIcon.contentMode = .center
-        carIcon.image = UIImage(named: "car")
+        carIcon.image = R.image.car
         
         addSubview(carIcon)
         carIcon.snp.makeConstraints { makeCarIcon in
@@ -95,7 +95,7 @@ class FloatingPanelUIView: UIView {
     
     private func initArrowRight() {
         arrowRight.translatesAutoresizingMaskIntoConstraints = false
-        arrowRight.image = UIImage(named: "arrow_right")
+        arrowRight.image = R.image.arrow_right()
         
         addSubview(arrowRight)
         arrowRight.snp.makeConstraints { makeArrowRight in

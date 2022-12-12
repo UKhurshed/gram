@@ -26,3 +26,8 @@
 "serviceWasNil" = "Service instance was nil";
 
 "whereWeGoing" = "Куда едем?";
+
+"address" = "Адрес";
+"map" = "Карта";
+"enterAddress" = "Введите место или адрес";
+"street" = "Улица";

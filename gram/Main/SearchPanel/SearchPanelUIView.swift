@@ -40,7 +40,7 @@ class SearchPanelUIView: UIView {
         searchTextField.leftViewMode = .always
         
         imageView.frame = CGRect(x: 15, y: 23, width: 17, height: 17)
-        imageView.image = UIImage(named: "search-field")
+        imageView.image = R.image.searchField()
        
         searchTextField.addSubview(imageView)
         let leftView = UIView.init(frame: CGRectMake(24, 50, 45, 0))
@@ -49,7 +49,7 @@ class SearchPanelUIView: UIView {
         searchTextField.layer.borderColor = CGColor.getColorByHexCgColor(rgbHexValue: 0xFFFFFFFF)
         searchTextField.layer.cornerRadius = 15
         searchTextField.backgroundColor = .white
-        searchTextField.placeholder = "Адрес"
+        searchTextField.placeholder = R.string.localizable.address()
         setRightView()
         
         addSubview(searchTextField)
@@ -64,7 +64,7 @@ class SearchPanelUIView: UIView {
     private func setRightView() {
         searchTextField.rightViewMode = .always
         let mapLabel = UILabel()
-        mapLabel.text = "Карта"
+        mapLabel.text = R.string.localizable.map()
         mapLabel.font = UIFont.systemFont(ofSize: 14)
         mapLabel.textColor = UIColor.getColorByHex(rgbHexValue: 0xFF989898)
         mapLabel.frame = CGRect(x: 300, y: 20, width: 50, height: 20)
@@ -100,7 +100,7 @@ class SearchPanelUIView: UIView {
     
     private func initEnterAddress() {
         enterAddress.translatesAutoresizingMaskIntoConstraints = false
-        enterAddress.text = "Введите место или адрес"
+        enterAddress.text = R.string.localizable.enterAddress()
         enterAddress.font = UIFont.systemFont(ofSize: 15, weight: .medium)
         enterAddress.textColor = UIColor.getColorByHex(rgbHexValue: 0xFF989898)
         enterAddress.isHidden = false
@@ -175,7 +175,7 @@ extension SearchPanelUIView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let item = viewModel[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: SearchTableViewCell.identifier, for: indexPath) as! SearchTableViewCell
-        cell.setupData(searchName: item.name, street: item.street ?? "Улица")
+        cell.setupData(searchName: item.name, street: item.street ?? R.string.localizable.street())
         print("cell: \(cell)")
         return cell
     }

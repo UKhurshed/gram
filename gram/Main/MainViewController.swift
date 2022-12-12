@@ -34,13 +34,13 @@ class MainViewController: UIViewController {
 
 extension MainViewController: YMKUserLocationObjectListener {
     func onObjectAdded(with view: YMKUserLocationView) {
-        view.arrow.setIconWith(UIImage(named:"user_arrow")!)
+        view.arrow.setIconWith(R.image.user_arrow()!)
         
         let pinPlacemark = view.pin.useCompositeIcon()
         
         pinPlacemark.setIconWithName(
             "pin",
-            image: UIImage(named:"search_result")!,
+            image: R.image.search_result()!,
             style:YMKIconStyle(
                 anchor: CGPoint(x: 0.5, y: 0.5) as NSValue,
                 rotationType:YMKRotationType.rotate.rawValue as NSNumber,
