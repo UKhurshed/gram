@@ -19,7 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         let window = UIWindow(windowScene: windowScene)
         let accessToken = UserDefaults.standard.string(forKey: UserDefaultsKeyContants.accessToken)
-        if accessToken != nil {
+        print("accessToken: \(String(describing: accessToken))")
+        if accessToken == nil {
             let registerVC = UINavigationController(rootViewController: RegisterViewController())
             window.rootViewController = registerVC
         } else {

@@ -8,12 +8,18 @@
 import UIKit
 import YandexMapsMobile
 
+protocol LocationViewTapped: AnyObject {
+    func locationTappedToLogOut()
+}
+
 class MainUIView: UIView {
     
     private var mapView = YMKMapView()
     private let locationView = UIView()
     private let moreBackground = UIImageView()
     private let locationBackground = UIImageView()
+    
+    weak var delegate: LocationViewTapped?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -44,6 +50,7 @@ class MainUIView: UIView {
         locationView.translatesAutoresizingMaskIntoConstraints = false
         locationView.backgroundColor = .black
         locationView.layer.cornerRadius = 25
+        locationView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(logOut)))
         
         addSubview(locationView)
         locationView.snp.makeConstraints { makeLocation in
@@ -52,6 +59,10 @@ class MainUIView: UIView {
             makeLocation.height.equalTo(45)
             makeLocation.width.equalTo(130)
         }
+    }
+    
+    @objc private func logOut() {
+        delegate?.locationTappedToLogOut()
     }
     
     private func initMoreBackground() {

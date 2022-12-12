@@ -22,6 +22,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        mainUIView.delegate = self
         fpc = FloatingPanelController(delegate: self)
         let vc = FloatingPanelViewController()
         vc.fpc = fpc
@@ -60,5 +61,22 @@ extension MainViewController: YMKUserLocationObjectListener {
 
 
 extension MainViewController: FloatingPanelControllerDelegate {
+    
+}
+
+extension MainViewController: LocationViewTapped {
+    func locationTappedToLogOut() {
+        UserDefaults.standard.removeObject(forKey: UserDefaultsKeyContants.accessToken)
+        print("logOut")
+        let accessToken = UserDefaults.standard.string(forKey: UserDefaultsKeyContants.accessToken)
+        if accessToken == nil {
+            DispatchQueue.main.async {
+                let vc = RegisterViewController()
+                vc.modalPresentationStyle = .fullScreen
+                self.present(vc, animated: true)
+            }
+        }
+    }
+    
     
 }

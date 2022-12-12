@@ -41,6 +41,11 @@ class VerificationViewController: UIViewController {
 extension VerificationViewController: VerifyDisplayLogic {
     func success(viewModel: VerifyViewModel) {
         print("viewModel: \(viewModel)")
+        DispatchQueue.main.async {
+            let vc = MainViewController()
+            vc.modalPresentationStyle = .fullScreen
+            self.present(vc, animated: true)
+        }
     }
     
     func startLoading() {
