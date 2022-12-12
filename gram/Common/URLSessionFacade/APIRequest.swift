@@ -12,6 +12,7 @@ struct APIConstants {
     static let hostURL: String = "testapi.client.gram.tj"
     static let registerPathURL: String = "/api/auth/client-registers"
     static let verifyPathURL: String = "/api/auth/client-registers/2"
+    static let searchAddessURL: String = "/api/orders/search-addresses"
 }
 
 struct APIRequest {

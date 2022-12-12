@@ -7,6 +7,7 @@ target 'gram' do
   pod 'SnapKit', '~> 5.6.0'
   pod 'R.swift'
   pod 'YandexMapsMobile', '4.2.2-full'
+  pod 'FloatingPanel'
 
   # Pods for gram
 

@@ -13,6 +13,8 @@ protocol UrlSessionProtocol {
     func registerUserByPhoneNumber<RegisterResponse: Decodable>(with apiRequest: APIRequest) async throws -> RegisterResponse
     
     func verifyBySmsCode<VerifyResponse: Decodable>(with apiRequest: APIRequest) async throws -> VerifyResponse
+    
+    func searchAddress<SearchAddressResponse: Decodable>(with apiRequest: APIRequest) async throws -> SearchAddressResponse
 }
 
 class URLSessionFacade: UrlSessionProtocol {
@@ -43,6 +45,17 @@ class URLSessionFacade: UrlSessionProtocol {
         print("verifyBySmsCode statusCode: \(httpURLResponse.statusCode)")
         
         return try JSONDecoder().decode(VerifyResponse.self, from: data)
+    }
+    
+    func searchAddress<SearchAddressResponse: Decodable>(with apiRequest: APIRequest) async throws -> SearchAddressResponse {
+        let urlRequest = try apiRequest.getURLRequest()
+        let (data, response) = try await urlSession.data(for: urlRequest)
+        guard let httpURLResponse = response as? HTTPURLResponse else {
+            throw CustomError.nullData
+        }
+        print("searchAddress statusCode: \(httpURLResponse.statusCode)")
+        
+        return try JSONDecoder().decode(SearchAddressResponse.self, from: data)
     }
     
 }

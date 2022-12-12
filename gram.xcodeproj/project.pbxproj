@@ -8,6 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		48D6C441637132D93F60B418 /* Pods_gram.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87C65F3DDF407CCE8E9B089A /* Pods_gram.framework */; };
+		D3347623294744F500928953 /* SearchPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3347622294744F500928953 /* SearchPanelViewController.swift */; };
+		D33476252947450E00928953 /* SearchPanelUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33476242947450E00928953 /* SearchPanelUIView.swift */; };
+		D33476272947680700928953 /* SearchPanelModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33476262947680700928953 /* SearchPanelModel.swift */; };
+		D3347629294769ED00928953 /* SearchAddressService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3347628294769ED00928953 /* SearchAddressService.swift */; };
+		D334762B29476A1B00928953 /* SearchAddressInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D334762A29476A1B00928953 /* SearchAddressInteractor.swift */; };
+		D334762D29476CBD00928953 /* SearchAddressPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D334762C29476CBD00928953 /* SearchAddressPresenter.swift */; };
+		D33476322947815300928953 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33476312947815300928953 /* SearchTableViewCell.swift */; };
+		D3350BA82945DEF600E6ADB5 /* FloatingPanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3350BA72945DEF600E6ADB5 /* FloatingPanelViewController.swift */; };
+		D3350BAB2945DF3600E6ADB5 /* FloatingPanelUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3350BAA2945DF3600E6ADB5 /* FloatingPanelUIView.swift */; };
+		D3350BAE2946038700E6ADB5 /* ColorExntensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3350BAD2946038700E6ADB5 /* ColorExntensions.swift */; };
+		D3350BB229463E2600E6ADB5 /* OrderHistoryCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3350BB129463E2600E6ADB5 /* OrderHistoryCollectionView.swift */; };
+		D3350BB529463E6700E6ADB5 /* OrderHistoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3350BB429463E6700E6ADB5 /* OrderHistoryCollectionViewCell.swift */; };
 		D34000922943336A006AC599 /* CustomError.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34000912943336A006AC599 /* CustomError.swift */; };
 		D34000942943337A006AC599 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34000932943337A006AC599 /* APIRequest.swift */; };
 		D3400096294335F4006AC599 /* URLSessionFacade.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3400095294335F4006AC599 /* URLSessionFacade.swift */; };
@@ -38,6 +50,18 @@
 		16A8A005BA5D1103306CB449 /* Pods-gram.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gram.release.xcconfig"; path = "Target Support Files/Pods-gram/Pods-gram.release.xcconfig"; sourceTree = "<group>"; };
 		87C65F3DDF407CCE8E9B089A /* Pods_gram.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_gram.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA0F28D35F87FF7E0E4FC165 /* Pods-gram.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-gram.debug.xcconfig"; path = "Target Support Files/Pods-gram/Pods-gram.debug.xcconfig"; sourceTree = "<group>"; };
+		D3347622294744F500928953 /* SearchPanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPanelViewController.swift; sourceTree = "<group>"; };
+		D33476242947450E00928953 /* SearchPanelUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPanelUIView.swift; sourceTree = "<group>"; };
+		D33476262947680700928953 /* SearchPanelModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchPanelModel.swift; sourceTree = "<group>"; };
+		D3347628294769ED00928953 /* SearchAddressService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAddressService.swift; sourceTree = "<group>"; };
+		D334762A29476A1B00928953 /* SearchAddressInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAddressInteractor.swift; sourceTree = "<group>"; };
+		D334762C29476CBD00928953 /* SearchAddressPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAddressPresenter.swift; sourceTree = "<group>"; };
+		D33476312947815300928953 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		D3350BA72945DEF600E6ADB5 /* FloatingPanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPanelViewController.swift; sourceTree = "<group>"; };
+		D3350BAA2945DF3600E6ADB5 /* FloatingPanelUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingPanelUIView.swift; sourceTree = "<group>"; };
+		D3350BAD2946038700E6ADB5 /* ColorExntensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExntensions.swift; sourceTree = "<group>"; };
+		D3350BB129463E2600E6ADB5 /* OrderHistoryCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryCollectionView.swift; sourceTree = "<group>"; };
+		D3350BB429463E6700E6ADB5 /* OrderHistoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderHistoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		D34000912943336A006AC599 /* CustomError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomError.swift; sourceTree = "<group>"; };
 		D34000932943337A006AC599 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		D3400095294335F4006AC599 /* URLSessionFacade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionFacade.swift; sourceTree = "<group>"; };
@@ -95,6 +119,63 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		D3347621294744D500928953 /* SearchPanel */ = {
+			isa = PBXGroup;
+			children = (
+				D334762E294780A200928953 /* TableView */,
+				D3347622294744F500928953 /* SearchPanelViewController.swift */,
+				D33476242947450E00928953 /* SearchPanelUIView.swift */,
+				D33476262947680700928953 /* SearchPanelModel.swift */,
+				D3347628294769ED00928953 /* SearchAddressService.swift */,
+				D334762A29476A1B00928953 /* SearchAddressInteractor.swift */,
+				D334762C29476CBD00928953 /* SearchAddressPresenter.swift */,
+			);
+			path = SearchPanel;
+			sourceTree = "<group>";
+		};
+		D334762E294780A200928953 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				D33476312947815300928953 /* SearchTableViewCell.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		D3350BA92945DF0F00E6ADB5 /* FloatingPanel */ = {
+			isa = PBXGroup;
+			children = (
+				D3350BAF29463D6E00E6ADB5 /* CollectionView */,
+				D3350BA72945DEF600E6ADB5 /* FloatingPanelViewController.swift */,
+				D3350BAA2945DF3600E6ADB5 /* FloatingPanelUIView.swift */,
+			);
+			path = FloatingPanel;
+			sourceTree = "<group>";
+		};
+		D3350BAC2946037800E6ADB5 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D3350BAD2946038700E6ADB5 /* ColorExntensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D3350BAF29463D6E00E6ADB5 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				D3350BB329463E5700E6ADB5 /* Cell */,
+				D3350BB129463E2600E6ADB5 /* OrderHistoryCollectionView.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		D3350BB329463E5700E6ADB5 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D3350BB429463E6700E6ADB5 /* OrderHistoryCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		D340009029433349006AC599 /* URLSessionFacade */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +189,8 @@
 		D35BBB33294482600043B033 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				D3347621294744D500928953 /* SearchPanel */,
+				D3350BA92945DF0F00E6ADB5 /* FloatingPanel */,
 				D35BBB382944869D0043B033 /* MainViewController.swift */,
 				D35BBB362944868D0043B033 /* MainUIView.swift */,
 			);
@@ -145,6 +228,7 @@
 		D3CB56FB2941CB4B004B259D /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				D3350BAC2946037800E6ADB5 /* Extensions */,
 				D340009029433349006AC599 /* URLSessionFacade */,
 				D3CB56FC2941CB91004B259D /* Resources */,
 				D35BBB34294483160043B033 /* UserDefaultsKeyConstants.swift */,
@@ -342,7 +426,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$SRCROOT/gram/Common/Resources/R.generated.swift",
+				$SRCROOT/gram/Common/Resources/R.generated.swift,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -356,26 +440,38 @@
 			buildActionMask = 2147483647;
 			files = (
 				D35BBB392944869D0043B033 /* MainViewController.swift in Sources */,
+				D33476252947450E00928953 /* SearchPanelUIView.swift in Sources */,
 				D34000982943632A006AC599 /* VerificationViewController.swift in Sources */,
 				D3400096294335F4006AC599 /* URLSessionFacade.swift in Sources */,
 				D34000A229437970006AC599 /* VerificationService.swift in Sources */,
 				D3CB57032941ED36004B259D /* RegisterViewController.swift in Sources */,
 				D340009E2943793B006AC599 /* VerificationInteractor.swift in Sources */,
+				D3350BAE2946038700E6ADB5 /* ColorExntensions.swift in Sources */,
 				D340009A29436349006AC599 /* VerificationUIView.swift in Sources */,
+				D3350BB229463E2600E6ADB5 /* OrderHistoryCollectionView.swift in Sources */,
+				D3347629294769ED00928953 /* SearchAddressService.swift in Sources */,
+				D33476322947815300928953 /* SearchTableViewCell.swift in Sources */,
+				D334762D29476CBD00928953 /* SearchAddressPresenter.swift in Sources */,
 				D3CB570B294249C8004B259D /* RegisterModel.swift in Sources */,
 				D3C2F5412941C4F7003AC29D /* AppDelegate.swift in Sources */,
 				D3CB57072941ED66004B259D /* RegisterUIView.swift in Sources */,
 				D3CB57092942497A004B259D /* RegisterInteractor.swift in Sources */,
+				D334762B29476A1B00928953 /* SearchAddressInteractor.swift in Sources */,
+				D3350BA82945DEF600E6ADB5 /* FloatingPanelViewController.swift in Sources */,
 				D34000922943336A006AC599 /* CustomError.swift in Sources */,
 				D3C2F5432941C4F7003AC29D /* SceneDelegate.swift in Sources */,
 				D340009C29437524006AC599 /* VerificationModel.swift in Sources */,
 				D34000942943337A006AC599 /* APIRequest.swift in Sources */,
+				D3347623294744F500928953 /* SearchPanelViewController.swift in Sources */,
+				D33476272947680700928953 /* SearchPanelModel.swift in Sources */,
+				D3350BB529463E6700E6ADB5 /* OrderHistoryCollectionViewCell.swift in Sources */,
 				D34000A029437951006AC599 /* VerificationPresenter.swift in Sources */,
 				D3CB570F2942581A004B259D /* RegisterService.swift in Sources */,
 				D3CB57002941CFA8004B259D /* R.generated.swift in Sources */,
 				D35BBB372944868D0043B033 /* MainUIView.swift in Sources */,
 				D35BBB35294483160043B033 /* UserDefaultsKeyConstants.swift in Sources */,
 				D3CB570D294256BA004B259D /* RegisterPresenter.swift in Sources */,
+				D3350BAB2945DF3600E6ADB5 /* FloatingPanelUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

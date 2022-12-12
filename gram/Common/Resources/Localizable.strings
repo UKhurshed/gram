@@ -24,3 +24,5 @@
 "networkSessionError" = "Network session error was occurred";
 "freedReference" = "The arc reference was nil";
 "serviceWasNil" = "Service instance was nil";
+
+"whereWeGoing" = "Куда едем?";
